@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyShop.Order.Application.Features.MediatR.Commands.OrderingCommands;
@@ -6,6 +7,7 @@ using MyShop.Order.Application.Features.MediatR.Queries.OrderingQueries;
 
 namespace MyShop.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderingsController : ControllerBase

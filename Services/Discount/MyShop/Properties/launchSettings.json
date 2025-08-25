@@ -8,13 +8,15 @@
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5286"
     },
-    "https": {
+    "MyShop.Discount": {
       "commandName": "Project",
+      "launchBrowser": false,
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7226;http://localhost:5286"
+      "applicationUrl": "https://localhost:7071"
     },
     "IIS Express": {
       "commandName": "IISExpress",

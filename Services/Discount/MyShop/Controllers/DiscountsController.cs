@@ -6,7 +6,7 @@ using MyShop.Discount.Services;
 
 namespace MyShop.Discount.Controllers
 {
-    [Authorize]
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DiscountsController : ControllerBase
