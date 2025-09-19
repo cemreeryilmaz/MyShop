@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MyShop.Catalog.Dtos.ProductDto;
 using MyShop.Dtos.CategoryDto;
 using MyShop.Dtos.ProductDetailDto;
 using MyShop.Dtos.ProductDto;
@@ -31,6 +32,8 @@ namespace MyShop.Mapping
             CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
+
+            CreateMap<Product, ResultProductsWithCategoryDto>().ReverseMap();
 
         }
     }
