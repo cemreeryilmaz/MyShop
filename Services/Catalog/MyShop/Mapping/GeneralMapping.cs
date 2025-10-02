@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using MyShop.Catalog.Dtos.FeatureSliderDtos;
 using MyShop.Catalog.Dtos.ProductDto;
+using MyShop.Catalog.Entities;
 using MyShop.Dtos.CategoryDto;
 using MyShop.Dtos.ProductDetailDto;
 using MyShop.Dtos.ProductDto;
@@ -34,6 +36,11 @@ namespace MyShop.Mapping
             CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
 
             CreateMap<Product, ResultProductsWithCategoryDto>().ReverseMap();
+
+            CreateMap<FeatureSlider, ResultFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, CreateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, UpdateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, GetByIdFeatureSliderDto>().ReverseMap();
 
         }
     }
