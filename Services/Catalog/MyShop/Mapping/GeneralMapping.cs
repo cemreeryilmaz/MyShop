@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
+using MyShop.Catalog.Dtos.AboutDtos;
+using MyShop.Catalog.Dtos.BrandDtos;
+using MyShop.Catalog.Dtos.FeatureDtos;
 using MyShop.Catalog.Dtos.FeatureSliderDtos;
+using MyShop.Catalog.Dtos.OfferDiscountDtos;
 using MyShop.Catalog.Dtos.ProductDto;
 using MyShop.Catalog.Dtos.SpecialOfferDtos;
 using MyShop.Catalog.Entities;
@@ -47,6 +51,26 @@ namespace MyShop.Mapping
             CreateMap<SpecialOffer, CreateSpecialOfferDto>().ReverseMap();
             CreateMap<SpecialOffer, UpdateSpecialOfferDto>().ReverseMap();
             CreateMap<SpecialOffer, GetByIdSpecialOfferDto>().ReverseMap();
+
+            CreateMap<Feature, ResultFeatureDto>().ReverseMap();
+            CreateMap<Feature, CreateFeatureDto>().ReverseMap();
+            CreateMap<Feature, UpdateFeatureDto>().ReverseMap();
+            CreateMap<Feature, GetByIdFeatureDto>().ReverseMap();
+
+            CreateMap<OfferDiscount, ResultOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, CreateOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, UpdateOfferDiscountDto>().ReverseMap();
+            CreateMap<OfferDiscount, GetByIdOfferDiscountDto>().ReverseMap();
+
+            CreateMap<Brand, ResultBrandDto>().ReverseMap();
+            CreateMap<Brand, CreateBrandDto>().ReverseMap();
+            CreateMap<Brand, UpdateBrandDto>().ReverseMap();
+            CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
+
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, GetByIdAboutDto>().ReverseMap();
 
         }
     }

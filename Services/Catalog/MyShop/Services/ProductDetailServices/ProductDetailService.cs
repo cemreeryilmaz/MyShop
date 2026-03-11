@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MongoDB.Driver;
+using MyShop.Catalog.Dtos.ProductDto;
 using MyShop.Dtos.ProductDetailDto;
 using MyShop.Entities;
 using MyShop.Settings;
@@ -38,6 +39,12 @@ namespace MyShop.Services.ProductDetailServices
         public async Task<GetByIdProductDetailDto> GetByIdProductDetailAsync(string id)
         {
             var values = await _productDetailCollection.Find<ProductDetail>(x => x.ProductDetailId == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetByIdProductDetailDto>(values);
+        }
+
+        public async Task<GetByIdProductDetailDto> GetByProductIdProductDetailAsync(string id)
+        {
+            var values = await _productDetailCollection.Find<ProductDetail>(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductDetailDto>(values);
         }
 

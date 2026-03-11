@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using MyShop.Catalog.Services.AboutServices;
+using MyShop.Catalog.Services.BrandServices;
+using MyShop.Catalog.Services.FeatureServices;
 using MyShop.Catalog.Services.FeatureSliderServices;
+using MyShop.Catalog.Services.OfferDiscountServies;
 using MyShop.Catalog.Services.SpecialOfferServices;
 using MyShop.Services.CategoryServices;
 using MyShop.Services.ProductDetailServices;
@@ -24,6 +28,10 @@ builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
+builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

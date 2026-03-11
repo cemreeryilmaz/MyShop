@@ -1,4 +1,5 @@
-﻿using MyShop.Dtos.ProductDetailDto;
+﻿using MyShop.Catalog.Dtos.ProductDto;
+using MyShop.Dtos.ProductDetailDto;
 
 namespace MyShop.Services.ProductDetailServices
 {
@@ -9,5 +10,7 @@ namespace MyShop.Services.ProductDetailServices
         Task UpdateProductDetailAsync(UpdateProductDetailDto updateProductDetailDto);
         Task DeleteProductDetailAsync(string id);
         Task<GetByIdProductDetailDto> GetByIdProductDetailAsync(string id);
+        Task<GetByIdProductDetailDto> GetByProductIdProductDetailAsync(string id);
+       
     }
 }

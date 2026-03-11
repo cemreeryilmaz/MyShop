@@ -27,7 +27,7 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
             ViewBag.v0 = "Özel Teklifler İşlemleri";
 
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7070/api/SpeacialOffers");
+            var responseMessage = await client.GetAsync("https://localhost:7070/api/SpecialOffers");
 
             if (responseMessage.IsSuccessStatusCode)
             {
@@ -58,7 +58,7 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createSpecialOfferDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7070/api/SpeacialOffers", stringContent);
+            var responseMessage = await client.PostAsync("https://localhost:7070/api/SpecialOffers", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "SpecialOffer", new { area = "Admin" });
@@ -71,7 +71,7 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteSpecialOffer(string id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("https://localhost:7070/api/SpeacialOffers?id=" + id);
+            var responseMessage = await client.DeleteAsync("https://localhost:7070/api/SpecialOffers?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "SpecialOffer", new { area = "Admin" });
@@ -89,7 +89,7 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
             ViewBag.v3 = "Özel Teklifler ve Günün İndirim Listesi";
             ViewBag.v0 = "Özel Teklifler İşlemleri";
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7070/api/SpeacialOffers/" + id);
+            var responseMessage = await client.GetAsync("https://localhost:7070/api/SpecialOffers/" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -106,7 +106,7 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateSpecialOfferDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("https://localhost:7070/api/SpeacialOffers/", stringContent);
+            var responseMessage = await client.PutAsync("https://localhost:7070/api/SpecialOffers/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "SpecialOffer", new { area = "Admin" });

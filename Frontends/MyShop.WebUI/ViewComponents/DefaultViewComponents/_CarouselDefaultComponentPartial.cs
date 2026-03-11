@@ -28,7 +28,6 @@ namespace MyShop.WebUI.ViewComponents.DefaultViewComponents
             }
 
             return View();
-            return View();
         }
     }
 }
