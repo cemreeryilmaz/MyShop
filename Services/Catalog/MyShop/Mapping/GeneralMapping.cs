@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MyShop.Catalog.Dtos.AboutDtos;
 using MyShop.Catalog.Dtos.BrandDtos;
+using MyShop.Catalog.Dtos.ContactDtos;
 using MyShop.Catalog.Dtos.FeatureDtos;
 using MyShop.Catalog.Dtos.FeatureSliderDtos;
 using MyShop.Catalog.Dtos.OfferDiscountDtos;
@@ -71,6 +72,11 @@ namespace MyShop.Mapping
             CreateMap<About, CreateAboutDto>().ReverseMap();
             CreateMap<About, UpdateAboutDto>().ReverseMap();
             CreateMap<About, GetByIdAboutDto>().ReverseMap();
+
+            CreateMap<Contact, ResultContactDto>().ReverseMap();
+            CreateMap<Contact, CreateContactDto>().ReverseMap();
+            CreateMap<Contact, UpdateContactDto>().ReverseMap();
+            CreateMap<Contact, GetByIdContactDto>().ReverseMap();
 
         }
     }

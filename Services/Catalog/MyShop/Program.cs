@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using MyShop.Catalog.Services.AboutServices;
 using MyShop.Catalog.Services.BrandServices;
+using MyShop.Catalog.Services.ContactServices;
 using MyShop.Catalog.Services.FeatureServices;
 using MyShop.Catalog.Services.FeatureSliderServices;
 using MyShop.Catalog.Services.OfferDiscountServies;
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
