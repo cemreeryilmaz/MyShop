@@ -5,7 +5,7 @@ using MyShop.Catalog.Services.SpecialOfferServices;
 
 namespace MyShop.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SpecialOffersController : ControllerBase

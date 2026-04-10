@@ -6,7 +6,7 @@ using MyShop.Services.CategoryServices;
 
 namespace MyShop.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

@@ -37,6 +37,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 	ProjectSection(SolutionItems) = preProject
 		FontAwesome.txt = FontAwesome.txt
 		IdentityServerVersionErrorSolution.txt = IdentityServerVersionErrorSolution.txt
+		LoginIndex.txt = LoginIndex.txt
+		OcelotCodeExample.txt = OcelotCodeExample.txt
+		OcelotLink.txt = OcelotLink.txt
 		PortainerCmd.txt = PortainerCmd.txt
 		PortNumbers.txt = PortNumbers.txt
 		UserExample.txt = UserExample.txt
@@ -67,6 +70,20 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{A5EA3871-6E55-4CF4-98EA-8F25449364E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Comment", "Services\Comment\MyShop.Comment\MyShop.Comment.csproj", "{B676D206-F056-41B7-A500-96C6B68F141B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{127AE584-E38D-4680-9A1B-C3C48DC3A593}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{C63987C7-639A-4E56-8E87-9732320C17BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{081DD806-CA06-47F5-B543-83CC7EF5B4F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Payment", "Services\Payment\MyShop.Payment\MyShop.Payment.csproj", "{4C631E19-53C5-4DD5-9672-7E67128C5892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Images", "Services\Images\MyShop.Images\MyShop.Images.csproj", "{83E99203-303F-46AD-AD01-38472520553D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{DFF19699-ADD0-4F3C-8797-31E727723BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.OcelotGateway", "ApiGateway\MyShop.OcelotGateway\MyShop.OcelotGateway.csproj", "{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -138,6 +155,18 @@ Global
 		{B676D206-F056-41B7-A500-96C6B68F141B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B676D206-F056-41B7-A500-96C6B68F141B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B676D206-F056-41B7-A500-96C6B68F141B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C631E19-53C5-4DD5-9672-7E67128C5892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C631E19-53C5-4DD5-9672-7E67128C5892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C631E19-53C5-4DD5-9672-7E67128C5892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C631E19-53C5-4DD5-9672-7E67128C5892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E99203-303F-46AD-AD01-38472520553D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E99203-303F-46AD-AD01-38472520553D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E99203-303F-46AD-AD01-38472520553D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E99203-303F-46AD-AD01-38472520553D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +197,11 @@ Global
 		{E2DCF4B1-5AE9-403E-B4E7-54787C27C4AC} = {7C44CBAB-0AD0-444F-895F-A33E57484B32}
 		{A5EA3871-6E55-4CF4-98EA-8F25449364E2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B676D206-F056-41B7-A500-96C6B68F141B} = {A5EA3871-6E55-4CF4-98EA-8F25449364E2}
+		{081DD806-CA06-47F5-B543-83CC7EF5B4F2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4C631E19-53C5-4DD5-9672-7E67128C5892} = {081DD806-CA06-47F5-B543-83CC7EF5B4F2}
+		{83E99203-303F-46AD-AD01-38472520553D} = {DFF19699-ADD0-4F3C-8797-31E727723BD6}
+		{DFF19699-ADD0-4F3C-8797-31E727723BD6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{BD0F3FBB-39B9-4B30-A1D8-2A2561D2E709} = {127AE584-E38D-4680-9A1B-C3C48DC3A593}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEC40DC5-104B-45EC-BC2D-2871D1504142}

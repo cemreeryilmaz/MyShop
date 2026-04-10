@@ -6,7 +6,7 @@ using MyShop.Catalog.Services.BrandServices;
 
 namespace MyShop.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BrandsController : ControllerBase

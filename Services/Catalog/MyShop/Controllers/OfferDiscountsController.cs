@@ -4,7 +4,7 @@ using MyShop.Catalog.Dtos.OfferDiscountDtos;
 using MyShop.Catalog.Services.OfferDiscountServies;
 namespace MyShop.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OfferDiscountsController : ControllerBase

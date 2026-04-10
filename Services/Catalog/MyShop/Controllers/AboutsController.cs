@@ -6,7 +6,7 @@ using MyShop.Catalog.Services.AboutServices;
 
 namespace MyShop.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AboutsController : ControllerBase

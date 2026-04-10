@@ -6,7 +6,7 @@ using MyShop.Catalog.Services.FeatureSliderServices;
 
 namespace MyShop.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FeatureSlidersController : ControllerBase
