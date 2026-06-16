@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 using MyShop.Order.Application.Features.MediatR.Commands.OrderingCommands;
 using MyShop.Order.Application.Interfaces;
 using MyShop.Order.Domain.Entities;
@@ -19,10 +19,11 @@ namespace MyShop.Order.Application.Features.MediatR.Handlers.OrderingHandlers
             _repository = repository;
         }
 
-        public async Task Handle(RemoveOrderingCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(RemoveOrderingCommand request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
             await _repository.DeleteAsync(values);
+            return Unit.Value;
         }
     }
 }

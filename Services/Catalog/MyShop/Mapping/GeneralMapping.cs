@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using MyShop.Catalog.Dtos.AboutDtos;
 using MyShop.Catalog.Dtos.BrandDtos;
 using MyShop.Catalog.Dtos.ContactDtos;
@@ -13,8 +13,6 @@ using MyShop.Dtos.ProductDetailDto;
 using MyShop.Dtos.ProductDto;
 using MyShop.Dtos.ProductImageDto;
 using MyShop.Entities;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace MyShop.Mapping
 {
     public class GeneralMapping : Profile

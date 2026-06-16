@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 using MyShop.Order.Application.Features.MediatR.Commands.OrderingCommands;
 using MyShop.Order.Application.Interfaces;
 using MyShop.Order.Domain.Entities;
@@ -18,7 +18,7 @@ namespace MyShop.Order.Application.Features.MediatR.Handlers.OrderingHandlers
             _repository = repository;
         }
 
-        public async Task Handle(CreateOrderingCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(CreateOrderingCommand request, CancellationToken cancellationToken)
         {
             await _repository.CreateAsync(new Ordering
             {
@@ -26,6 +26,7 @@ namespace MyShop.Order.Application.Features.MediatR.Handlers.OrderingHandlers
                 TotalPrice = request.TotalPrice,
                 UserId = request.UserId
             });
+            return Unit.Value;
         }
     }
 }

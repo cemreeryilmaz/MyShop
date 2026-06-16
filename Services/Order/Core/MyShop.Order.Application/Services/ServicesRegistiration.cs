@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace MyShop.Order.Application.Services
     {
         public static void AddApplicationService(this IServiceCollection services,IConfiguration configuration)
         {
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ServicesRegistiration).Assembly));
+            services.AddMediatR(typeof(ServicesRegistiration).Assembly);
         }
     }
 }
