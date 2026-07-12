@@ -14,33 +14,33 @@ namespace MyShop.WebUI.Services.CatalogServices.SpecialOfferServices
         public async Task CreateSpecialOfferAsync(CreateSpecialOfferDto createSpecialOfferDto)
         {
             var response = await _httpClient.PostAsJsonAsync("SpecialOffers", createSpecialOfferDto);
-            await EnsureSuccessAsync(response, "Kategori eklenemedi");
+            await EnsureSuccessAsync(response, "Özel Teklif eklenemedi");
         }
 
         public async Task DeleteSpecialOfferAsync(string id)
         {
             var response = await _httpClient.DeleteAsync("SpecialOffers?id=" + id);
-            await EnsureSuccessAsync(response, "Silinemedi");
+            await EnsureSuccessAsync(response, "Özel Teklif silinemedi");
         }
 
         public async Task<List<ResultSpecialOfferDto>> GetAllSpecialOfferAsync()
         {
             var responseMessage = await _httpClient.GetAsync("SpecialOffers");
-            return await ReadJsonAsync<List<ResultSpecialOfferDto>>(responseMessage, "Liste Alınamadı")
+            return await ReadJsonAsync<List<ResultSpecialOfferDto>>(responseMessage, "Özel Teklifler alınamadı")
                 ?? new List<ResultSpecialOfferDto>();
         }
 
         public async Task<UpdateSpecialOfferDto> GetByIdSpecialOfferAsync(string id)
         {
             var responseMessage = await _httpClient.GetAsync("SpecialOffers/" + id);
-            return await ReadJsonAsync<UpdateSpecialOfferDto>(responseMessage, "Bulunamadı")
-                ?? throw new InvalidOperationException("Bulunamadı.");
+            return await ReadJsonAsync<UpdateSpecialOfferDto>(responseMessage, "Özel Teklif bulunamadı")
+                ?? throw new InvalidOperationException("Özel Teklif bulunamadı.");
         }
 
         public async Task UpdateSpecialOfferAsync(UpdateSpecialOfferDto updateSpecialOfferDto)
         {
             var response = await _httpClient.PutAsJsonAsync("SpecialOffers", updateSpecialOfferDto);
-            await EnsureSuccessAsync(response, "Güncellenemedi");
+            await EnsureSuccessAsync(response, "Özel Teklif güncellenemedi");
         }
 
         private static async Task EnsureSuccessAsync(HttpResponseMessage response, string message)

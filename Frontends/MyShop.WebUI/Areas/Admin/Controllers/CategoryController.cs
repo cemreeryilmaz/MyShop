@@ -21,8 +21,6 @@ namespace MyShop.WebUI.Areas.Admin.Controllers
             _categoryService = categoryService;
         }
 
-
-
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
